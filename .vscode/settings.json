@@ -1,0 +1,4 @@
+{
+    "Lua.diagnostics.globals": ["vim", "opt", "common_on_attach"],
+    "Lua.diagnostics.disable": ["unused-function", "deprecated"]
+}
