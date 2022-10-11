@@ -1,5 +1,6 @@
 local opt = vim.opt
 
+opt.termguicolors = true
 opt.number = true
 opt.showmode = true
 opt.showcmd = true
@@ -24,3 +25,4 @@ opt.history = 1000
 opt.wildmenu = true
 opt.splitbelow = true
 opt.clipboard = "unnamedplus"
+opt.termguicolors = true

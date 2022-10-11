@@ -3,6 +3,7 @@ return require("packer").startup(function(use)
 	use("olimorris/onedarkpro.nvim")
 	use("kyazdani42/nvim-web-devicons")
 	use("nvim-treesitter/nvim-treesitter")
+	use("sainnhe/everforest")
 
 	use({
 		"ojroques/nvim-hardline",
@@ -240,4 +241,17 @@ return require("packer").startup(function(use)
 	use({ "jbyuki/one-small-step-for-vimkind" })
 	use({ "rainbowhxch/accelerated-jk.nvim" })
 	use({ "amaomaoa/md5.lua", "amaomaoa/fy", "amaomaoa/json.lua" })
+
+	use({
+		"lewis6991/impatient.nvim",
+		config = function()
+			require("impatient")
+		end,
+	})
+	use({
+		"goolord/alpha-nvim",
+		config = function()
+			require("alpha").setup(require("alpha.themes.dashboard").config)
+		end,
+	})
 end)
