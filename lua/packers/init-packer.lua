@@ -4,6 +4,8 @@ return require("packer").startup(function(use)
 	use("kyazdani42/nvim-web-devicons")
 	use("nvim-treesitter/nvim-treesitter")
 	use("sainnhe/everforest")
+	use("folke/tokyonight.nvim")
+	use("navarasu/onedark.nvim")
 
 	use({
 		"ojroques/nvim-hardline",
@@ -251,7 +253,7 @@ return require("packer").startup(function(use)
 	use({
 		"goolord/alpha-nvim",
 		config = function()
-			require("alpha").setup(require("alpha.themes.dashboard").config)
+			require("alpha").setup(require("alpha.themes.startify").config)
 		end,
 	})
 end)
