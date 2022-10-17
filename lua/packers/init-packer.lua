@@ -43,6 +43,13 @@ return require("packer").startup(function(use)
 		"windwp/nvim-autopairs",
 		config = function()
 			require("nvim-autopairs").setup({})
+			local status, cmp = pcall(require, "cmp")
+			if not status then
+				vim.cmd([[packadd nvim-cmp]])
+				cmp = require("cmp")
+			end
+			local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+			cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done({ map_char = { tex = "" } }))
 		end,
 	})
 
@@ -79,7 +86,12 @@ return require("packer").startup(function(use)
 	use({
 		"windwp/nvim-ts-autotag",
 		config = function()
-			require("nvim-ts-autotag").setup()
+			require("nvim-ts-autotag").setup({
+
+				autotag = {
+					enable = true,
+				},
+			})
 		end,
 	})
 	use("folke/lua-dev.nvim")
