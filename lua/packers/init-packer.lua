@@ -83,17 +83,7 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use({
-		"windwp/nvim-ts-autotag",
-		config = function()
-			require("nvim-ts-autotag").setup({
-
-				autotag = {
-					enable = true,
-				},
-			})
-		end,
-	})
+	use("windwp/nvim-ts-autotag")
 	use("folke/lua-dev.nvim")
 
 	-- ui

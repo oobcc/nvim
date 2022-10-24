@@ -51,3 +51,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 require("lspconfig").html.setup({
 	capabilities = capabilities,
 })
+
+require("lspconfig").cssls.setup({
+	capabilities = capabilities,
+})
