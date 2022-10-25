@@ -5,6 +5,7 @@ return require("packer").startup(function(use)
 	use("nvim-treesitter/nvim-treesitter")
 	use("sainnhe/everforest")
 	use("folke/tokyonight.nvim")
+	use("shaunsingh/nord.nvim")
 	use("navarasu/onedark.nvim")
 
 	use({
@@ -95,7 +96,7 @@ return require("packer").startup(function(use)
 			require("nvim-cursorline").setup({
 				cursorline = {
 					enable = true,
-					timeout = 1000,
+					timeout = 1,
 					number = false,
 				},
 				cursorword = {
@@ -106,6 +107,7 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
+
 	use({
 		"kosayoda/nvim-lightbulb",
 		requires = "antoinemadec/FixCursorHold.nvim",

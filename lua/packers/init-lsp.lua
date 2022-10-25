@@ -55,3 +55,7 @@ require("lspconfig").html.setup({
 require("lspconfig").cssls.setup({
 	capabilities = capabilities,
 })
+
+require("lspconfig").tsserver.setup({
+	capabilities = capabilities,
+})

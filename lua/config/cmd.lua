@@ -2,12 +2,12 @@ local cmd = vim.cmd
 --vim.opt.termguicolors = true
 cmd("set nobackup")
 
-cmd("set background=dark")
+-- cmd("set background=dark")
 cmd("set t_Co=256")
 cmd("set noswapfile")
 vim.g.everforest_background = "medium"
 vim.g.everforest_better_performance = 1
-cmd("colorscheme onedarkpro")
+cmd("colorscheme nord")
 -- cmd("set foldcolumn=3")
 
 -- vim.api.nvim_create_autocmd("BufWritePre", {
